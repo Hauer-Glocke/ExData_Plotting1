@@ -29,11 +29,10 @@ lines(data$datetime,
       data$Sub_metering_3,
       col="blue")
 legend("topright",
-       lty=c(1,1,1),
+       lty=1,lwd = 2,
        col = c("black", "red", "blue"),
        legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), 
-       bty="n",
-       cex=0.5)
+       bty="n")
 
 plot(data$datetime,
      data$Global_reactive_power,type="n")

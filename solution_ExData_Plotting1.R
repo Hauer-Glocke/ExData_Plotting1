@@ -15,9 +15,8 @@ loc <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_co
 temp <- tempfile()
 download.file(loc,temp)
 con <- unz(temp, "household_power_consumption.txt")
-df <- read_csv2("household_power_consumption.txt")
+df <- read_csv2(con)
 unlink(temp)
-close(con)
 
 data <- df %>%
         mutate(Date=as.Date(Date, format = "%d/%m/%Y")) %>%
